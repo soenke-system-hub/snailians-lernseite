@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Außerirdische Schnecken planen seit 40.000 Jahren die Übernahme der Erde – Die Schleimspur</title>
+<meta name="description" content="Forscher bestätigen: Die Snailians sind unter uns. Behörden räumen leichte Verzögerungen im Zeitplan ein.">
+<meta property="og:title" content="Außerirdische Schnecken planen seit 40.000 Jahren die Übernahme der Erde">
+<meta property="og:description" content="Behörden bestätigen leichte Verzögerungen im Zeitplan.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1113; --bg2:#151a1d; --panel:#1a2024;
+    --ink:#ebe5d8; --muted:#9b968b; --rule:rgba(235,229,216,.13);
+    --shell:#b8925e; --shell-dark:#7d5f39;
+    --slime:#a6d86f; --slime-deep:#4f7a2c; --sheen:#d8f0dc;
+    --red:#d2553f;
+    --serif:"Newsreader", Georgia, serif;
+    --display:"Fraunces", Georgia, serif;
+    --mono:"IBM Plex Mono", ui-monospace, monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:400 1.14rem/1.65 var(--serif);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* Filmkorn */
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:50; opacity:.07;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Glimmen im Hintergrund */
+  body::after{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:-1;
+    background:
+      radial-gradient(60vw 50vh at 85% 10%, rgba(166,216,111,.07), transparent 70%),
+      radial-gradient(50vw 60vh at 0% 90%, rgba(184,146,94,.08), transparent 70%);
+  }
+  a{color:var(--slime); text-decoration-thickness:1px; text-underline-offset:3px}
+  ::selection{background:var(--slime); color:#10140c}
+
+  /* Riesige Spirale, rotiert in Snailian-Geschwindigkeit */
+  .bg-spiral{
+    position:fixed; right:-22vmin; top:8vh; width:80vmin; height:80vmin; z-index:-1;
+    opacity:.07; pointer-events:none; animation:spin 900s linear infinite;
+  }
+  .bg-spiral path{fill:none; stroke:var(--shell); stroke-width:.6}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* Lesefortschritt mit Schnecke */
+  .progress{position:fixed; top:0; left:0; right:0; height:4px; z-index:60; pointer-events:none}
+  .progress .trail{
+    height:100%; width:0;
+    background:linear-gradient(90deg, rgba(166,216,111,.0), var(--slime) 60%, var(--sheen));
+    box-shadow:0 0 12px rgba(166,216,111,.6);
+  }
+  .progress .snail{
+    position:absolute; top:-1px; left:0; width:18px; height:18px; transform:translateX(-50%);
+    filter:drop-shadow(0 0 4px rgba(0,0,0,.6));
+  }
+  .progress .snail path{fill:none; stroke:var(--shell); stroke-width:2.4; stroke-linecap:round}
+  .progress .snail circle{fill:var(--shell-dark)}
+
+  /* Ticker */
+  .ticker{
+    margin-top:4px; background:var(--red); color:#fff; font:600 .8rem/1 var(--mono);
+    letter-spacing:.04em; text-transform:uppercase; overflow:hidden; white-space:nowrap;
+    display:flex; align-items:stretch;
+  }
+  .ticker .label{background:#111; padding:.7rem 1rem .7rem 2rem; flex:none; position:relative; z-index:2}
+  .ticker .label::after{content:"●"; color:var(--red); margin-left:.5rem; animation:blink 1.2s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .ticker .track{display:flex; animation:ticker 70s linear infinite; padding:.7rem 0}
+  .ticker .track span{padding-right:3rem}
+  @keyframes ticker{to{transform:translateX(-50%)}}
+
+  /* Kopf */
+  header.masthead{text-align:center; padding:2.2rem 1.2rem 0; position:relative}
+  .meta-row{
+    max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; gap:1rem;
+    font:400 .74rem/1.3 var(--mono); color:var(--muted); text-transform:uppercase; letter-spacing:.08em;
+    border-bottom:1px solid var(--rule); padding-bottom:.8rem;
+  }
+  .brand{
+    font-family:var(--display); font-weight:900; font-size:clamp(2.8rem, 9vw, 7.2rem);
+    line-height:.95; letter-spacing:-.02em; margin:1.2rem 0 .3rem;
+    font-variation-settings:"opsz" 144, "SOFT" 100, "WONK" 1;
+    background:linear-gradient(180deg, #f3eee2 0%, #d8d0bd 55%, #a99f88 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .brand em{font-style:italic; font-weight:300; color:var(--slime); -webkit-text-fill-color:var(--slime)}
+  .tagline{font:italic 400 1rem/1.4 var(--serif); color:var(--muted); margin:0 0 1rem}
+  nav.rubrics{
+    max-width:1180px; margin:0 auto; border-top:3px double var(--rule); border-bottom:1px solid var(--rule);
+    display:flex; justify-content:center; flex-wrap:wrap; gap:.2rem 1.6rem; padding:.7rem 0;
+    font:600 .78rem/1 var(--mono); text-transform:uppercase; letter-spacing:.12em;
+  }
+  nav.rubrics span{color:var(--muted)}
+  nav.rubrics span.on{color:var(--slime)}
+  .drip{display:block; width:100%; max-width:1180px; height:46px; margin:0 auto; overflow:visible}
+
+  /* Aufmacher */
+  .hero{max-width:1180px; margin:1.5rem auto 0; padding:0 1.2rem}
+  .kicker{
+    display:inline-flex; align-items:center; gap:.6rem;
+    font:600 .78rem/1 var(--mono); text-transform:uppercase; letter-spacing:.14em; color:var(--slime);
+  }
+  .kicker .badge{background:var(--red); color:#fff; padding:.3rem .5rem}
+  h1{
+    font-family:var(--display); font-weight:800; font-size:clamp(2.2rem, 5.6vw, 4.6rem);
+    line-height:1.02; letter-spacing:-.015em; margin:.8rem 0 .6rem; max-width:17ch;
+    font-variation-settings:"opsz" 144, "SOFT" 50;
+  }
+  .subhead{
+    font-family:var(--display); font-style:italic; font-weight:400; font-size:clamp(1.25rem, 2.4vw, 1.75rem);
+    color:var(--shell); margin:0 0 1.6rem; max-width:40ch;
+  }
+  .byline{
+    display:flex; flex-wrap:wrap; gap:.4rem 1.4rem; font:400 .8rem/1.4 var(--mono); color:var(--muted);
+    border-top:1px solid var(--rule); padding-top:.8rem; margin-bottom:1.6rem;
+  }
+  .byline strong{color:var(--ink); font-weight:600}
+
+  figure.lead-img{margin:0; position:relative; overflow:hidden; border:1px solid var(--rule); background:#000}
+  figure.lead-img img{display:block; width:100%; height:auto; transition:transform 8s ease}
+  figure.lead-img:hover img{transform:scale(1.04)}
+  figure.lead-img::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(0,0,0,.55));
+  }
+  figure.lead-img .stamp{
+    position:absolute; top:1.2rem; right:1.2rem; z-index:2;
+    font:600 .75rem/1.25 var(--mono); text-transform:uppercase; letter-spacing:.12em; text-align:center;
+    color:var(--red); border:2px solid var(--red); padding:.5rem .7rem; transform:rotate(6deg);
+    background:rgba(14,17,19,.55); backdrop-filter:blur(2px);
+  }
+  figcaption{font:italic .92rem/1.5 var(--serif); color:var(--muted); padding:.7rem 0 0}
+  figcaption b{font:600 .7rem var(--mono); text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-style:normal; margin-left:.4rem}
+
+  /* Artikel */
+  .layout{
+    max-width:1180px; margin:2.6rem auto 0; padding:0 1.2rem;
+    display:grid; grid-template-columns:minmax(0, 1fr); gap:2.6rem;
+  }
+  @media (min-width:980px){ .layout{grid-template-columns:minmax(0, 680px) 1fr; gap:4rem} }
+  article p{margin:0 0 1.25rem}
+  article .lede{font-size:1.32rem; line-height:1.55}
+  article .lede::first-letter{
+    float:left; font:900 5.2rem/.82 var(--display); margin:.32rem .6rem 0 0; color:var(--shell);
+    font-variation-settings:"opsz" 144, "WONK" 1;
+  }
+  .dateline{font:600 .9rem var(--mono); letter-spacing:.04em; color:var(--slime)}
+  article h2{
+    font-family:var(--display); font-weight:700; font-size:1.8rem; line-height:1.15; margin:2.6rem 0 1rem;
+    font-variation-settings:"opsz" 72;
+  }
+  article h2::before{
+    content:""; display:block; width:3.2rem; height:6px; border-radius:6px; margin-bottom:.9rem;
+    background:linear-gradient(90deg, var(--slime), var(--sheen)); box-shadow:0 0 14px rgba(166,216,111,.5);
+  }
+
+  blockquote.pull{
+    margin:2.4rem 0; padding:1.6rem 0 1.4rem 2.2rem; position:relative;
+    border-left:4px solid var(--shell);
+  }
+  blockquote.pull::before{
+    content:"„"; position:absolute; left:.8rem; top:-2.6rem; font:900 7rem/1 var(--display); color:var(--shell); opacity:.35;
+  }
+  blockquote.pull p{font:italic 500 clamp(1.5rem, 3vw, 2rem)/1.3 var(--display); margin:0 0 .8rem}
+  blockquote.pull cite{font:400 .8rem var(--mono); color:var(--muted); font-style:normal; text-transform:uppercase; letter-spacing:.1em}
+
+  /* Live-Tracker */
+  .tracker{
+    margin:2.4rem 0; padding:1.5rem 1.5rem 1.3rem; background:var(--panel);
+    border:1px solid rgba(166,216,111,.35); position:relative; overflow:hidden;
+    box-shadow:inset 0 0 60px rgba(166,216,111,.06);
+  }
+  .tracker::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px);
+  }
+  .tracker h3{
+    margin:0 0 1rem; font:600 .8rem var(--mono); text-transform:uppercase; letter-spacing:.14em; color:var(--slime);
+    display:flex; align-items:center; gap:.6rem;
+  }
+  .tracker h3::before{content:""; width:.6rem; height:.6rem; border-radius:50%; background:var(--slime); box-shadow:0 0 10px var(--slime); animation:blink 1.6s steps(2) infinite}
+  .tracker .big{font:700 clamp(2.4rem, 6vw, 3.6rem)/1 var(--mono); color:var(--sheen); letter-spacing:-.02em}
+  .tracker .big small{font-size:.4em; color:var(--muted); margin-left:.3rem}
+  .tracker p{font-size:1rem; color:var(--muted); margin:.6rem 0 0}
+  .tracker .bar{height:10px; background:#0b0e10; border:1px solid var(--rule); margin:1.2rem 0 .4rem; position:relative}
+  .tracker .bar i{position:absolute; left:0; top:0; bottom:0; width:1px; background:var(--slime); box-shadow:0 0 8px var(--slime)}
+  .tracker .barlabel{display:flex; justify-content:space-between; gap:1rem; font:400 .74rem/1.4 var(--mono); color:var(--muted)}
+
+  /* Tabelle */
+  .tablewrap{overflow-x:auto; margin:1.4rem 0 2rem; border:1px solid var(--rule)}
+  table{width:100%; border-collapse:collapse; font-size:1rem; min-width:520px}
+  th, td{text-align:left; padding:.75rem .9rem; border-bottom:1px solid var(--rule); vertical-align:top}
+  thead th{font:600 .74rem var(--mono); text-transform:uppercase; letter-spacing:.1em; color:var(--muted); background:var(--bg2)}
+  thead th:last-child{color:var(--slime)}
+  tbody th{font-family:var(--display); font-weight:600}
+  tbody tr:hover{background:rgba(166,216,111,.04)}
+  tbody td:last-child{color:var(--sheen)}
+
+  /* Regeln */
+  ol.rules{list-style:none; counter-reset:r; padding:0; margin:1.2rem 0 2rem}
+  ol.rules li{counter-increment:r; position:relative; padding:.9rem 0 .9rem 3.6rem; border-bottom:1px dashed var(--rule)}
+  ol.rules li::before{
+    content:counter(r); position:absolute; left:0; top:.75rem; width:2.4rem; height:2.4rem; border-radius:50%;
+    display:grid; place-items:center; font:700 1.1rem var(--display); color:#14100a;
+    background:radial-gradient(circle at 35% 30%, #e6c58f, var(--shell) 55%, var(--shell-dark));
+    box-shadow:inset -3px -3px 6px rgba(0,0,0,.35);
+  }
+  ol.rules b{font-weight:600}
+
+  .update{
+    border:2px solid var(--red); padding:1.1rem 1.3rem; margin:2.4rem 0 1rem; position:relative;
+    background:rgba(210,85,63,.06);
+  }
+  .update strong{font:600 .8rem var(--mono); text-transform:uppercase; letter-spacing:.12em; color:var(--red); display:block; margin-bottom:.4rem}
+  .update p{margin:0}
+
+  /* Seitenspalte */
+  aside .card{
+    position:sticky; top:1.6rem; background:linear-gradient(180deg, var(--panel), var(--bg2));
+    border:1px solid var(--rule); padding:1.6rem 1.5rem; overflow:hidden;
+  }
+  aside .card .shell{position:absolute; right:-40px; top:-40px; width:170px; height:170px; opacity:.13}
+  aside .card .shell path{fill:none; stroke:var(--shell); stroke-width:2}
+  aside h4{margin:0 0 1.1rem; font:600 .8rem var(--mono); text-transform:uppercase; letter-spacing:.14em; color:var(--shell)}
+  aside dl{margin:0}
+  aside dt{font:600 .7rem var(--mono); text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-top:.95rem}
+  aside dd{margin:.15rem 0 0; font-size:1.02rem; line-height:1.4}
+  aside .stamp-small{
+    display:inline-block; margin-top:1.4rem; font:600 .68rem var(--mono); text-transform:uppercase; letter-spacing:.14em;
+    color:var(--slime); border:1px solid var(--slime); padding:.35rem .55rem; transform:rotate(-3deg);
+  }
+
+  /* Mehr zum Thema */
+  .more{max-width:1180px; margin:4rem auto 0; padding:0 1.2rem}
+  .more h3{font:600 .8rem var(--mono); text-transform:uppercase; letter-spacing:.14em; color:var(--muted); border-top:3px double var(--rule); padding-top:1.2rem; margin:0 0 1.2rem}
+  .more .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.4rem}
+  .more .item{padding:1.1rem 0 0; border-top:1px solid var(--rule)}
+  .more .item .num{font:900 2.4rem/1 var(--display); color:var(--shell); opacity:.5}
+  .more .item p{font:600 1.12rem/1.35 var(--display); margin:.4rem 0 0}
+
+  footer{
+    max-width:1180px; margin:4rem auto 0; padding:2rem 1.2rem 3rem; border-top:1px solid var(--rule);
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem;
+    font:400 .78rem/1.5 var(--mono); color:var(--muted);
+  }
+  footer .logo{font:900 1.4rem var(--display); color:var(--ink)}
+  footer .logo em{color:var(--slime); font-weight:300}
+
+  /* Schleimspur des Mauszeigers */
+  #slime{position:fixed; inset:0; pointer-events:none; z-index:40; mix-blend-mode:screen}
+
+  /* Einblenden beim Scrollen */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .9s ease, transform .9s ease}
+  .reveal.in{opacity:1; transform:none}
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{animation:none !important; transition:none !important}
+    .reveal{opacity:1; transform:none}
+    #slime{display:none}
+  }
+  @media (max-width:640px){
+    .meta-row{flex-direction:column; align-items:center; gap:.3rem}
+    figure.lead-img .stamp{font-size:.6rem; top:.7rem; right:.7rem}
+  }
+</style>
+</head>
+<body>
+
+<svg class="bg-spiral" viewBox="-100 -100 200 200" aria-hidden="true"><path data-spiral="95"/></svg>
+
+<div class="progress" aria-hidden="true">
+  <div class="trail"></div>
+  <svg class="snail" viewBox="-12 -12 24 24"><circle r="10.5"/><path data-spiral="10"/></svg>
+</div>
+<canvas id="slime" aria-hidden="true"></canvas>
+
+<div class="ticker" role="marquee" aria-label="Eilmeldungen">
+  <div class="label">Eilmeldung</div>
+  <div class="track">
+    <span>+++ Snailian in Gartencenter bei Paderborn gesichtet, Lage unter Kontrolle +++</span>
+    <span>+++ Bundesamt rät: Gummistiefel tragen, nicht hektisch werden +++</span>
+    <span>+++ Invasionsfront rückt seit gestern um 7 Meter vor +++</span>
+    <span>+++ Weinbergschnecken distanzieren sich ausdrücklich +++</span>
+    <span>+++ Snailian in Gartencenter bei Paderborn gesichtet, Lage unter Kontrolle +++</span>
+    <span>+++ Bundesamt rät: Gummistiefel tragen, nicht hektisch werden +++</span>
+    <span>+++ Invasionsfront rückt seit gestern um 7 Meter vor +++</span>
+    <span>+++ Weinbergschnecken distanzieren sich ausdrücklich +++</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="meta-row">
+    <span id="today">Montag, 2. November 2026</span>
+    <span>Ausgabe 18.204 · Erscheint, sobald fertig</span>
+    <span>Wetter: feucht, ideal</span>
+  </div>
+  <div class="brand">Die <em>Schleim</em>spur</div>
+  <p class="tagline">Unabhängig. Gründlich. Langsam. Seit 1871.</p>
+  <nav class="rubrics" aria-label="Rubriken">
+    <span>Politik</span><span class="on">Wissenschaft</span><span>Garten</span><span>Invasion</span><span>Panorama</span><span>Salatpreise</span>
+  </nav>
+  <svg class="drip" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="dg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#4f7a2c"/>
+        <stop offset=".6" stop-color="#a6d86f"/>
+        <stop offset="1" stop-color="#d8f0dc"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#dg)" opacity=".85" d="M0 0H1200V10C1182 10 1172 12 1168 20C1164 32 1160 42 1152 42C1144 42 1142 32 1140 22C1137 13 1122 10 1100 10H930C915 10 910 14 908 26C905 44 902 58 894 58C886 58 884 44 882 28C880 15 872 10 860 10H640C628 10 624 13 622 18C620 24 616 28 612 28C608 28 605 24 603 18C601 13 596 10 585 10H380C366 10 361 15 359 27C356 42 353 50 346 50C339 50 336 42 334 27C332 15 326 10 314 10H120C108 10 104 13 102 20C100 27 97 32 92 32C87 32 84 27 82 20C80 13 76 10 64 10H0Z"/>
+    <path fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.2" d="M0 3H1200"/>
+  </svg>
+</header>
+
+<section class="hero">
+  <div class="kicker"><span class="badge">Exklusiv</span> Wissenschaft · Xenomalakologie</div>
+  <h1>Außerirdische Schnecken planen seit 40.000 Jahren die Übernahme der Erde</h1>
+  <p class="subhead">Behörden bestätigen leichte Verzögerungen im Zeitplan</p>
+  <div class="byline">
+    <span>Von <strong>Gernot Schleiffer</strong>, Ressort Weichtiere</span>
+    <span>Lesezeit: 4 Minuten · für Snailians ca. 11 Wochen</span>
+  </div>
+  <figure class="lead-img reveal">
+    <img src="snailian.jpg" width="1408" height="768" alt="Ein Snailian, halb Schnecke, halb außerirdisches Wesen, kriecht über einen bemoosten Gehweg und hinterlässt eine Schleimspur.">
+    <div class="stamp">Bestätigt<br>Echt</div>
+    <figcaption>Ein Snailian auf Aufklärungsmission. Das Foto entstand mit einer Belichtungszeit von drei Wochen, das Tier ist trotzdem scharf.<b>Foto: Schleimspur-Archiv</b></figcaption>
+  </figure>
+</section>
+
+<div class="layout">
+  <article>
+    <p class="lede reveal"><span class="dateline">Unterwaldbach (sdp) –</span> Was Hobbygärtner seit Generationen für gewöhnlichen Schneckenfraß halten, ist nach Angaben von Wissenschaftlern Teil der langsamsten Invasion der Menschheitsgeschichte. Die sogenannten Snailians, eine Lebensform zwischen Schnecke und Außerirdischem, befinden sich demnach seit der letzten Eiszeit auf der Erde und haben seither ein Hochbeet unter ihre Kontrolle gebracht.</p>
+
+    <p class="reveal">„Wir haben es lange nicht bemerkt, weil es schlicht nichts zu bemerken gab“, erklärt Prof. Dr. Hiltrud Kriechbaum, Inhaberin des bundesweit einzigen Lehrstuhls für Xenomalakologie an der Universität Unterwaldbach. „Eine Invasion, die sich mit 0,03 Kilometern pro Stunde bewegt, fällt in keiner Statistik auf. Sie fällt eigentlich nirgends auf.“</p>
+
+    <h2 class="reveal">Das Gehäuse ist das Raumschiff</h2>
+    <p class="reveal">Nach heutigem Kenntnisstand stammen die Snailians von Gastropoda Prime, einem dauerhaft feuchten Planeten in rund 340 Lichtjahren Entfernung. Für die Reise nutzte jedes Individuum sein eigenes Gehäuse, das zugleich Wohnraum, Raumschiff und Spiralantrieb ist. Der Antrieb gilt als technisch brillant, erreicht allerdings auch im All nur Schrittgeschwindigkeit. Wie die Snailians die Strecke trotzdem bewältigt haben, ist ungeklärt. Kriechbaum vermutet: „Geduld.“</p>
+    <p class="reveal">Laut einem 2019 entschlüsselten Bordprotokoll war die vollständige Unterwerfung der Erde ursprünglich für das späte Pleistozän vorgesehen. Derzeit liegt man rund 39.000 Jahre hinter dem Zeitplan. Ein Sprecher der Snailians bezeichnete die Verzögerung auf Anfrage als „im Rahmen“. Die Antwort traf nach elf Wochen in der Redaktion ein.</p>
+
+    <blockquote class="pull reveal">
+      <p>Wir dachten jahrzehntelang, das seien Fraßschäden. Es sind Grenzmarkierungen.</p>
+      <cite>Prof. Dr. Hiltrud Kriechbaum, Xenomalakologin</cite>
+    </blockquote>
+
+    <h2 class="reveal">Salatbeete als Aufklärungsziel</h2>
+    <p class="reveal">Besonders aktiv sind die Snailians in deutschen Kleingärten. Was als angeknabberter Kopfsalat gilt, sind nach Erkenntnissen des Bundesamts für Außerirdische Weichtiere gezielte Aufklärungsmissionen. Jedes Loch im Blatt entspricht einem Bit Information, das per Schleimspur an die Heimatwelt übermittelt wird. Ein komplett abgefressenes Beet Eisbergsalat speichert damit etwa so viel wie eine Diskette.</p>
+    <p class="reveal">Die Schleimspuren selbst gelten inzwischen als Schriftsprache. Einem Doktoranden in Unterwaldbach gelang 2023 die Übersetzung einer 400 Meter langen Spur auf einem Gehweg in Wuppertal. Sie lautet: „Wir kommen in Frieden. Oder später.“ Der Rest der Spur wurde von einem Laubbläser zerstört, was zu diplomatischen Verstimmungen führte.</p>
+
+    <div class="tracker reveal" aria-live="off">
+      <h3>Live · Invasionsfront</h3>
+      <div class="big"><span id="cm">0,0</span><small>cm</small></div>
+      <p>So weit ist die Front vorgerückt, seit Sie diesen Artikel geöffnet haben. Aktuelle Position laut Bundesamt: kurz vor Bielefeld. Bielefeld bestreitet das.</p>
+      <div class="bar"><i></i></div>
+      <div class="barlabel"><span>Fortschritt Weltherrschaft: 0,0000000000016 %</span><span>Balken nicht maßstabsgetreu, sonst unsichtbar</span></div>
+    </div>
+
+    <h2 class="reveal">Bierfallen lösen diplomatische Krise aus</h2>
+    <p class="reveal">Für Spannungen sorgt vor allem der menschliche Umgang mit den Besuchern. Bierfallen werten die Snailians als Einladung zum Staatsbankett, was regelmäßig zu Missverständnissen über den weiteren Verlauf des Abends führt. Salz dagegen gilt als Kriegserklärung. Die Snailians haben deshalb eine förmliche Beschwerde auf den Weg nach Den Haag gebracht. Sie wird dort gegen 2041 erwartet.</p>
+
+    <h2 class="reveal">Schnecke oder Snailian? So erkennen Sie den Unterschied</h2>
+    <div class="tablewrap reveal">
+      <table>
+        <thead><tr><th>Merkmal</th><th>Gewöhnliche Schnecke</th><th>Snailian</th></tr></thead>
+        <tbody>
+          <tr><th>Kopf</th><td>weich, mit Fühlern</td><td>glänzend, Form behördlich nicht abschließend geklärt</td></tr>
+          <tr><th>Zähne</th><td>rund 14.000, mikroskopisch klein</td><td>weniger, dafür deutlich sichtbarer</td></tr>
+          <tr><th>Schwanz</th><td>nein</td><td>ja, mit Haken. Zweck unbekannt, Experten raten von Nachfragen ab</td></tr>
+          <tr><th>Reaktion auf Salz</th><td>stirbt</td><td>legt Beschwerde ein</td></tr>
+          <tr><th>Geräusche</th><td>keine</td><td>Summen bei 0,2 Hertz, hörbar nur für Hunde und Finanzbeamte</td></tr>
+          <tr><th>Lieblingsspeise</th><td>Salat</td><td>Salat. Das ist ja das Unheimliche.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="reveal">Was Bürgerinnen und Bürger jetzt tun sollten</h2>
+    <p class="reveal">Das Bundesamt für Außerirdische Weichtiere rät zur Besonnenheit. Eine akute Gefahr bestehe nicht, zumindest nicht vor dem Jahr 412.000.</p>
+    <ol class="rules reveal">
+      <li><b>Ruhe bewahren.</b> Die Snailians haben Zeit. Sie auch.</li>
+      <li><b>Kein Salz streuen.</b> Auch nicht auf Pommes, solange ein Snailian in Sichtweite ist.</li>
+      <li><b>Schleimspuren nicht betreten.</b> Es könnte sich um Post handeln.</li>
+      <li><b>Bei Begegnungen freundlich nicken.</b> Mit einer Antwort ist innerhalb von vier bis sechs Werktagen zu rechnen.</li>
+      <li><b>Verdächtige Sichtungen melden.</b> Die Hotline ist rund um die Uhr erreichbar, die Weiterleitung erfolgt im Tempo der Betroffenen.</li>
+    </ol>
+
+    <div class="update reveal">
+      <strong>Update, 14:32 Uhr</strong>
+      <p>Die Snailians haben auf eine Anfrage dieser Redaktion reagiert. Die vollständige Stellungnahme wird für das Frühjahr 2031 erwartet. Bislang liegt nur das erste Wort vor: „Wir“.</p>
+    </div>
+  </article>
+
+  <aside>
+    <div class="card reveal">
+      <svg class="shell" viewBox="-100 -100 200 200" aria-hidden="true"><path data-spiral="95"/></svg>
+      <h4>Steckbrief</h4>
+      <dl>
+        <dt>Name</dt><dd>Snailian. Die Eigenbezeichnung auszusprechen dauert etwa vier Tage.</dd>
+        <dt>Herkunft</dt><dd>Gastropoda Prime</dd>
+        <dt>Höchstgeschwindigkeit</dt><dd>0,05 km/h, mit Rückenwind</dd>
+        <dt>Population in Deutschland</dt><dd>geschätzt 2,3 Millionen, Tendenz kriechend</dd>
+        <dt>Bisher eroberte Fläche</dt><dd>2,4 m², ein Hochbeet in Castrop-Rauxel</dd>
+        <dt>Weltherrschaft voraussichtlich</dt><dd>im Jahr 412.026</dd>
+        <dt>Natürliche Feinde</dt><dd>Laubbläser, Igel, Terminkalender</dd>
+      </dl>
+      <span class="stamp-small">Amtlich geprüft</span>
+    </div>
+  </aside>
+</div>
+
+<section class="more">
+  <h3>Mehr zum Thema</h3>
+  <div class="grid">
+    <div class="item reveal"><div class="num">1</div><p>Weinbergschnecke bestreitet jede Verbindung zu Snailians: „Kenne die nur vom Sehen“</p></div>
+    <div class="item reveal"><div class="num">2</div><p>Gartencenter in Hessen melden Rekordabsatz bei Gummistiefeln</p></div>
+    <div class="item reveal"><div class="num">3</div><p>Bundesamt verschiebt Pressekonferenz zu Snailians aus Respekt auf 2029</p></div>
+    <div class="item reveal"><div class="num">4</div><p>Studie: Snailians lesen diesen Artikel gerade. Sie sind bei Absatz eins.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Die <em>Schleim</em>spur</div>
+  <div>Satire. Die Snailians sind frei erfunden.<br>Das würden sie allerdings auch sagen.</div>
+  <div>Impressum folgt per Schleimspur.</div>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Datum in der Kopfzeile
+  try {
+    document.getElementById('today').textContent =
+      new Intl.DateTimeFormat('de-DE', {weekday:'long', day:'numeric', month:'long', year:'numeric'}).format(new Date());
+  } catch (e) {}
+
+  // Logarithmische Spiralen für Hintergrund, Steckbrief und Lesefortschritt
+  document.querySelectorAll('path[data-spiral]').forEach(p => {
+    const R = +p.dataset.spiral, turns = 3.4, b = 0.2;
+    const tMax = turns * 2 * Math.PI, a = R / Math.exp(b * tMax);
+    let d = '';
+    for (let t = 0; t <= tMax; t += 0.06) {
+      const r = a * Math.exp(b * t);
+      d += (d ? 'L' : 'M') + (r * Math.cos(t)).toFixed(2) + ' ' + (r * Math.sin(t)).toFixed(2);
+    }
+    p.setAttribute('d', d);
+  });
+
+  // Lesefortschritt
+  const trail = document.querySelector('.progress .trail');
+  const snail = document.querySelector('.progress .snail');
+  const onScroll = () => {
+    const h = document.documentElement;
+    const pct = Math.min(1, h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight));
+    trail.style.width = (pct * 100) + '%';
+    snail.style.left = `max(10px, ${pct * 100}%)`;
+    snail.style.transform = `translateX(-50%) rotate(${pct * 1080}deg)`;
+  };
+  addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Einblenden beim Scrollen
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Live-Tracker: 0,03 km/h = 0,8333 cm/s
+  const start = performance.now(), cmEl = document.getElementById('cm');
+  const fmt = new Intl.NumberFormat('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
+  setInterval(() => { cmEl.textContent = fmt.format((performance.now() - start) / 1000 * 0.8333); }, 100);
+
+  // Schleimspur hinter dem Mauszeiger
+  if (reduce || !matchMedia('(pointer: fine)').matches) return;
+  const c = document.getElementById('slime'), ctx = c.getContext('2d');
+  let w, h, dpr, last = null;
+  const resize = () => {
+    dpr = Math.min(2, devicePixelRatio || 1);
+    w = c.width = innerWidth * dpr; h = c.height = innerHeight * dpr;
+    c.style.width = innerWidth + 'px'; c.style.height = innerHeight + 'px';
+  };
+  resize(); addEventListener('resize', resize);
+
+  const blob = (x, y, r) => {
+    const g = ctx.createRadialGradient(x - r * .3, y - r * .3, 0, x, y, r);
+    g.addColorStop(0, 'rgba(216,240,220,.55)');
+    g.addColorStop(.35, 'rgba(166,216,111,.28)');
+    g.addColorStop(1, 'rgba(79,122,44,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+  };
+
+  addEventListener('pointermove', e => {
+    const x = e.clientX * dpr, y = e.clientY * dpr;
+    if (last) {
+      const dx = x - last.x, dy = y - last.y, dist = Math.hypot(dx, dy);
+      const steps = Math.max(1, Math.floor(dist / (4 * dpr)));
+      for (let i = 0; i < steps; i++) {
+        const t = i / steps;
+        blob(last.x + dx * t, last.y + dy * t, (9 + Math.random() * 3) * dpr);
+      }
+    }
+    last = {x, y};
+  }, {passive:true});
+  addEventListener('pointerleave', () => last = null);
+
+  // Langsames Verblassen, wie echte Schleimspuren
+  const fade = () => {
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillStyle = 'rgba(0,0,0,.018)';
+    ctx.fillRect(0, 0, w, h);
+    ctx.globalCompositeOperation = 'source-over';
+    requestAnimationFrame(fade);
+  };
+  fade();
+})();
+</script>
+</body>
+</html>
